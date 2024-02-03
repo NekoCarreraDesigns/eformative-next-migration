@@ -1,0 +1,6 @@
+the page.js file contains dependencies, middleware, and a connection to the database.
+the file also contains the routes for the pages, each route has a specific function in
+the CRUD capabilities. the first routes on the page are for the users, the next four 
+routes are for product reviews, the next six are for seller/product reviews, and the last five
+are for the seller postings. The routes use mongoDB queries to the specified collection
+for each purpose "users", "reviews", "items", "admin". 
