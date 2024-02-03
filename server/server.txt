@@ -1,0 +1,7 @@
+the server.js file is full of the code needed to run the app in a serverless environment with node.js. 
+At the top of the file is where the dependencies are declared, the port for the server to listen to is defined.
+Then the dotenv configuration is declared with the config.env file. Express middleware following these.
+next would be the database connection import followed up by the function to listen to the server on the declared port, that connects to 
+the database and will throw a 404 error if there is an error, upon success will give two success messages 
+"server is listening on port 3001"
+"Successfully connected to mongoDB"
