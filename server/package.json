@@ -1,0 +1,26 @@
+{
+  "name": "eformative",
+  "version": "1.0.0",
+  "description": "eformative server package.json for node modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NekoCarreraDesigns/eformative-next-migration.git"
+  },
+  "keywords": [
+    "MongoDB",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Express"
+  ],
+  "author": "Nicholas Maas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NekoCarreraDesigns/eformative-next-migration/issues"
+  },
+  "homepage": "https://github.com/NekoCarreraDesigns/eformative-next-migration#readme"
+}
