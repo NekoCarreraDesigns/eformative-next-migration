@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/NekoCarreraDesigns/eformative-next-migration/issues"
   },
-  "homepage": "https://github.com/NekoCarreraDesigns/eformative-next-migration#readme"
+  "homepage": "https://github.com/NekoCarreraDesigns/eformative-next-migration#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1"
+  }
 }
