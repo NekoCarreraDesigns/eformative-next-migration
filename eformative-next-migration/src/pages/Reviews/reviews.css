@@ -1,0 +1,91 @@
+.reviews-page-header {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding-bottom: 25px
+}
+  
+.search-filters-div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+  
+.seller-filter-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+}
+  
+.search-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+  
+.search-input-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+}
+.seller-search-button,
+.product-search-button {
+    border: 2px solid rgb(255, 255, 255);
+}
+  
+.seller-search-button:hover,
+.product-search-button:hover {
+    background-color: rgb(255, 255, 255)1d;
+}
+
+.post-a-review-button {
+    margin-top: 5vw;
+    margin-bottom: 0px;
+}
+
+.reviews-container {
+    display: flex;
+    padding: 5vw 0;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+  
+.reviews-item {
+    width: 80%;
+    max-width: 1200px;
+}
+  
+.reviews-header {
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+  
+.reviews-div {
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+  
+.page-pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+ 
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+    .search-row {
+      flex-direction: column;
+    }
+  
+    .search-input-button {
+      width: 100%;
+      margin-bottom: 1em;
+    }
+  }
