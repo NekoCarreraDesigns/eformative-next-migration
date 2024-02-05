@@ -1,0 +1,22 @@
+.seller-page-header {
+    text-align: center;
+    font-size: 40px;
+    color: rgb(233, 255, 255);
+}
+
+.items-sold-header, .items-selling-header {
+    font-size: 30px;
+}
+
+.post-item-button, .logout-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    height: 30px;
+    width: 300px;
+    margin-top: 10px;
+    margin-left: 355px;
+}
