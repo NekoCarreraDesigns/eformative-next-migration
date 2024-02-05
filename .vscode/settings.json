@@ -1,0 +1,6 @@
+{
+    "eslint.format.enable": false,
+    "eslint.workingDirectories": [
+        "mobile/iOS", "platform/web"
+    ]
+}
