@@ -1,5 +1,5 @@
 {
-  "extends": ["next/core-web-vitals","next/babel", "next"],
+  "extends": ["next/core-web-vitals", "next/babel"],
   "plugins": ["@next/eslint-plugin-next"],
   "overrides": [
     {
