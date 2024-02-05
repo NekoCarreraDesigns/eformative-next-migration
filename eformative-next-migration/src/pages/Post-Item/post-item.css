@@ -1,0 +1,36 @@
+.post-item-header, .post-item-paragraph {
+    text-align: center;
+    font-size: 40px;
+    color: rgba(254, 254, 255)
+}
+
+.post-item-form-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80%;
+    text-align: center;
+    padding: 6vw 0 15vw;
+}
+
+.item-name-input, .item-price-input, .seller-name-post-input, .upload-picture-video-input {
+    border-radius: 10px;
+    width: 300px;
+    padding: 10px;
+}
+
+.post-item-textarea {
+    height: 400px;
+    width: 600px;
+}
+
+.add-item-button {
+    width: 200px;
+    padding: 10px 20px;
+}
+
+.character-count-post-span {
+    color: rgba(255, 0, 0, 0.6);
+}
+
