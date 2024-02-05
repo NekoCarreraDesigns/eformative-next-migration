@@ -1,4 +1,12 @@
 {
-  "extends": ["next/core-web-vitals", "next/babel"],
-  "plugins": ["@next/eslint-plugin-next"]
+  "extends": ["next/core-web-vitals","next/babel", "next"],
+  "plugins": ["@next/eslint-plugin-next"],
+  "overrides": [
+    {
+      "files": ["**/*.js"],
+      "parserOptions": {
+        "requireConfigFile": false
+      }
+    }
+  ]
 }
