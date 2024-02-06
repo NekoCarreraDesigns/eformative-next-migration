@@ -8,13 +8,13 @@ const IconsSection = () => {
         <div className='row'>
           {[
             {
-              src: "/assets/electric-products-white.png",
+              src: "/images/electric-products-white.png",
               alt: "Electric Products Icon",
               title: "Electric Products",
             },
-            { src: "/assets/news-white.png", alt: "News Icon", title: "News" },
+            { src: "/images/news-white.png", alt: "News Icon", title: "News" },
             {
-              src: "/assets/reviews-white.png",
+              src: "/images/reviews-white.png",
               alt: "Reviews Icon",
               title: "Reviews",
             },

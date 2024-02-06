@@ -17,8 +17,8 @@ const SignupCTASection = () => {
           <div className='left-column'>
             <img
               className='signup-cta-image'
-              alt='Couple on eScooter'
-              src='/assets/emotoscooter-cut.png'
+              alt='Couple on e-Scooter'
+              src='/images/emotoscooter-cut.png'
             />
           </div>
           <div className='right-column'>

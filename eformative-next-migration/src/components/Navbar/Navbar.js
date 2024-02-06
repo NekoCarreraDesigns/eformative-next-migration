@@ -63,7 +63,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-logo-container">
           <Link to="/">
-            <img alt="logo" className="navbar-logo" src="/assets/eformative-logo-2.png" />
+            <img alt="logo" className="navbar-logo" src="/images/eformative-logo-2.png" />
           </Link>
         </div>
         <div className="hamburger-menu" onClick={handleMenuClick} aria-label={isMenuOpen ? "Close menu": "Open menu"}>

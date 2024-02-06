@@ -20,7 +20,7 @@ const Home = () => {
         <img
           className='hero-logo'
           alt='eformative-logo'
-          src='/assets/eformative-logo-white.png'
+          src='/images/eformative-logo-white.png'
         />
         <h2 className='home-page-header'>Have Fun, and help the planet!</h2>
         <div className='button-container'>
