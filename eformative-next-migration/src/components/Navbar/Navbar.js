@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
-import "./Navbar.css";
+import { Link } from "react-router-dom";
+// import "./index.css";
 
 const Navbar = () => {
-  const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -31,31 +30,31 @@ const Navbar = () => {
   return (
     <nav className={isScrolled ? "navbar scrolled" : "navbar"}>
       <div className="inner-navbar">
-        <div className={`navbar-links ${isMenuOpen ? "open" : ""}`}>
+        <div className="navbar-links">
           <Link
-            className={`navbar-link ${location.pathname === "/" ? "active" : ""}`}
+            className="navbar-link"
             to="/"
             onClick={() => setIsMenuOpen(false)}
           >
             Home
           </Link>
           <Link
-            className={`navbar-link ${location.pathname === "/market" ? "active" : ""}`}
-            to="/market"
+            className="navbar-link"
+            to="/Market"
             onClick={() => setIsMenuOpen(false)}
           >
             Market
           </Link>
           <Link
-            className={`navbar-link ${location.pathname === "/reviews" ? "active" : ""}`}
-            to="/reviews"
+            className="navbar-link"
+            to="/Reviews"
             onClick={() => setIsMenuOpen(false)}
           >
             Reviews
           </Link>
           <Link
-            className={`navbar-link ${location.pathname === "/sell" ? "active" : ""}`}
-            to="/sell"
+            className="navbar-link"
+            to="/Sell"
             onClick={() => setIsMenuOpen(false)}
           >
             Sell
