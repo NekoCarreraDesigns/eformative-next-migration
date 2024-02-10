@@ -1,14 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom"
+import  Link  from "next/link"
 
 const Footer = () => {
   return (
     <footer className='page-footer'>
       <small className='footer-small-print'>&copy; 2024 eformative</small>
       <br/>
-      <Link className='footer-link' to='/about'>About Us</Link>
+      <Link className='footer-link' href="/about">About Us</Link>
       <br />
-      <Link className='footer-link' to='/admin-login'>Admin Login</Link>
+      <Link className='footer-link' href="/admin-login">Admin Login</Link>
     </footer>
   );
 };
