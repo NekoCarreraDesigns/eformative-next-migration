@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import  Link from "next/link";
 // import "./index.css";
 
-const Navbar = () => {
+export default function Navbar () {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -28,50 +28,32 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={isScrolled ? "navbar scrolled" : "navbar"}>
+    <>
       <div className="inner-navbar">
         <div className="navbar-links">
-          <Link
-            className="navbar-link"
-            to="/"
-            onClick={() => setIsMenuOpen(false)}
-          >
+          <Link href="/Home"  className="navbar-link" onClick={() => setIsMenuOpen(false)}>
             Home
           </Link>
-          <Link
-            className="navbar-link"
-            to="/Market"
-            onClick={() => setIsMenuOpen(false)}
-          >
+          <Link href="/Market"  className="navbar-link" onClick={() => setIsMenuOpen(false)}>
             Market
           </Link>
-          <Link
-            className="navbar-link"
-            to="/Reviews"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Reviews
+          <Link href="/Reviews"  className="navbar-link" onClick={() => setIsMenuOpen(false)}>
+          Reviews
           </Link>
-          <Link
-            className="navbar-link"
-            to="/Sell"
-            onClick={() => setIsMenuOpen(false)}
-          >
+          <Link href="/Sell"  className="navbar-link" onClick={() => setIsMenuOpen(false)}>
             Sell
           </Link>
         </div>
         <div className="navbar-logo-container">
-          <Link to="/">
+          
             <img alt="logo" className="navbar-logo" src="/images/eformative-logo-2.png" />
-          </Link>
         </div>
         <div className="hamburger-menu" onClick={handleMenuClick} aria-label={isMenuOpen ? "Close menu": "Open menu"}>
           &#9776; {/* Hamburger icon */}
         </div>
       </div>
-    </nav>
+      </>
   );
 };
 
-export default Navbar;
 
