@@ -372,9 +372,13 @@ code {
 }
 
 .page-footer {
-  padding: 15px;
+  padding: 15px 0;
   text-align: center;
   background-color: rgb(22, 22, 22);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-small-print,
