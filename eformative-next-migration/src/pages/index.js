@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Landing from "./Landing"
+
 
 export default function Home() {
   return (
@@ -16,11 +18,7 @@ export default function Home() {
       </Head>
       <main>
         <div>
-          <p>
-            
-            Hello World
-           
-          </p>
+          <Landing/>
         </div>
       </main>
     </>

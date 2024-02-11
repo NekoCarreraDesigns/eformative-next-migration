@@ -1,16 +1,16 @@
 import React from "react";
-import "./Home.css";
-import {useNavigate} from 'react-router-dom'
-import SignupCTASection from "../../components/SignupCTASection/SignupCTASection";
-import IconsSection from "../../components/Icons/Icons";
+// import "./landing.css";
+// import { useNavigate } from 'react-router-dom'
+// import SignupCTASection from "../../components/SignupCTASection";
+// import IconsSection from "../../components/Icons";
 
-const Home = () => {
-  let navigate = useNavigate();
+const Landing = () => {
+  // let navigate = useNavigate();
   const getLocation = () => {
     navigator.geolocation.getCurrentPosition((position) => {
       console.log("position:", position)
       console.log("current location:", window.location.href)
-      navigate("/market");
+      // navigate("/market");
     });
   };
 
@@ -28,11 +28,11 @@ const Home = () => {
             Find Your Market
           </button>
         </div>
-        <IconsSection />
+        {/* <IconsSection /> */}
       </div>
-      <SignupCTASection />
+      {/* <SignupCTASection /> */}
     </div>
   );
 };
 
-export default Home;
+export default Landing;
