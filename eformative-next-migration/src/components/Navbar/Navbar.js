@@ -31,7 +31,7 @@ export default function Navbar () {
     <>
       <div className="inner-navbar">
         <div className="navbar-links">
-          <Link href="/Home"  className="navbar-link" onClick={() => setIsMenuOpen(false)}>
+          <Link href="/Landing"  className="navbar-link" onClick={() => setIsMenuOpen(false)}>
             Home
           </Link>
           <Link href="/Market"  className="navbar-link" onClick={() => setIsMenuOpen(false)}>

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Icons.css";
+// import "./Icons.css";
 
 const IconsSection = () => {
   return (
