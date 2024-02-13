@@ -1,14 +1,15 @@
 import React from "react";
 import  Link  from "next/link"
+import styles from "./Footer.module.css"
 
 const Footer = () => {
   return (
-    <footer className='page-footer'>
-      <small className='footer-small-print'>&copy; 2024 eformative</small>
+    <footer className={styles.pageFooter}>
+      <small className={styles.footerSmallPrint}>&copy; 2024 eformative</small>
       <br/>
-      <Link className='footer-link' href="/about">About Us</Link>
+      <Link className={styles.footerLink} href="/about">About Us</Link>
       <br />
-      <Link className='footer-link' href="/admin-login">Admin Login</Link>
+      <Link className={styles.footerLink} href="/admin-login">Admin Login</Link>
     </footer>
   );
 };
