@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import  Link from "next/link";
-// import "./index.css";
+import Link  from "next/link";
+import styles from "./Navbar.module.css";
 
-export default function Navbar () {
+const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -28,32 +28,50 @@ export default function Navbar () {
   }, []);
 
   return (
-    <>
-      <div className="inner-navbar">
-        <div className="navbar-links">
-          <Link href="/Landing"  className="navbar-link" onClick={() => setIsMenuOpen(false)}>
+    <nav className={isScrolled ? styles.navbarScrolled : styles.navbar}>
+      <div className={styles.innerNavbar}>
+        <div className={styles.navbarLinks}>
+          <Link
+            className={styles.navbarLink}
+            href="/"
+            onClick={() => setIsMenuOpen(false)}
+          >
             Home
           </Link>
-          <Link href="/Market"  className="navbar-link" onClick={() => setIsMenuOpen(false)}>
+          <Link
+            className={styles.navbarLink}
+            href="/market"
+            onClick={() => setIsMenuOpen(false)}
+          >
             Market
           </Link>
-          <Link href="/Reviews"  className="navbar-link" onClick={() => setIsMenuOpen(false)}>
-          Reviews
+          <Link
+            className={styles.navbarLink}
+            href="/reviews"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Reviews
           </Link>
-          <Link href="/Sell"  className="navbar-link" onClick={() => setIsMenuOpen(false)}>
+          <Link
+            className={styles.navbarLink}
+            href="/sell"
+            onClick={() => setIsMenuOpen(false)}
+          >
             Sell
           </Link>
         </div>
-        <div className="navbar-logo-container">
-          
-            <img alt="logo" className="navbar-logo" src="/images/eformative-logo-2.png" />
+        <div className={styles.navbarLogoContainer}>
+          <Link href="/">
+            <img alt="logo" className={styles.navbarLogo} src="/images/eformative-logo-2.png" />
+          </Link>
         </div>
-        <div className="hamburger-menu" onClick={handleMenuClick} aria-label={isMenuOpen ? "Close menu": "Open menu"}>
+        <div className={styles.hamburgerMenu} onClick={handleMenuClick} aria-label={isMenuOpen ? "Close menu": "Open menu"}>
           &#9776; {/* Hamburger icon */}
         </div>
       </div>
-      </>
+    </nav>
   );
 };
 
+export default Navbar;
 
