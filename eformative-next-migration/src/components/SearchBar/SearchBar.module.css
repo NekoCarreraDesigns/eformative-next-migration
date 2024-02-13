@@ -1,4 +1,4 @@
-.market-page-header {
+.marketPageHeader {
     text-align: center;
     color: rgb(255, 255, 255);
 }
@@ -31,7 +31,7 @@
     cursor: pointer;
 }
 
-.market-filter-div {
+.marketFilterDiv {
     margin-left: auto;
     margin-right: auto;
     width: 70%;
@@ -41,7 +41,7 @@
     text-align: center;
 }
 
-.market-filter-input {
+.marketFilterInput {
     width: 100%;
     max-width: 500px;
     height: 30px;
@@ -53,13 +53,13 @@
     border: 1px solid transparent;
 }
 
-.market-filter-input-div {
+.marketFilterInputDiv {
     margin: 30px;
     text-align: center;
     border-radius: 10px;
 }
 
-.market-button-container {
+.marketButtonContainer {
     display: flex;
     justify-content: center;
     gap: 20px;
