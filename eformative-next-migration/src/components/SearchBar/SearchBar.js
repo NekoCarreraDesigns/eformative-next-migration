@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./SearchBar.css";
+import styles from  "./SearchBar.module.css";
 
 const SearchBar = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -29,9 +29,9 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div className='market-filter-input-div'>
+    <div className={styles.marketFilterInputDiv}>
       <input
-        className='market-filter-input'
+        className={styles.marketFilterInput}
         type='text'
         placeholder='What are you looking for?'
         id='search-bar'
@@ -39,7 +39,7 @@ const SearchBar = ({ onSearch }) => {
         onChange={(e) => setSearchTerm(e.target.value)}
         aria-label="search-input"
       />
-      <div className='market-button-container'>
+      <div className={styles.marketButtonContainer}>
         <button className='search-button clear-btn-sm' onClick={handleSearch}>
           Search
         </button>
