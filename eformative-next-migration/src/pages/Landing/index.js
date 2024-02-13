@@ -1,36 +1,36 @@
 import React from "react";
-// import "./landing.css";
-// import { useNavigate } from 'react-router-dom'
-// import SignupCTASection from "../../components/SignupCTASection";
-// import IconsSection from "../../components/Icons";
+import styles from "./landing.module.css";
+import { useRouter } from 'next/router'
+import SignupCTASection from "../../components/SignupCTASection";
+import IconsSection from "../../components/Icons";
 
 const Landing = () => {
-  // let navigate = useNavigate();
+  let navigate = useRouter();
   const getLocation = () => {
     navigator.geolocation.getCurrentPosition((position) => {
       console.log("position:", position)
       console.log("current location:", window.location.href)
-      // navigate("/market");
+      navigate.push("/market");
     });
   };
 
   return (
-    <div className='body'>
-      <div className='home-hero'>
+    <div className={styles.body}>
+      <div className={styles.homeHero}>
         <img
-          className='hero-logo'
+          className={styles.heroLogo}
           alt='eformative-logo'
           src='/images/eformative-logo-white.png'
         />
-        <h2 className='home-page-header'>Have Fun, and help the planet!</h2>
-        <div className='button-container'>
+        <h2 className={styles.homePageHeader}>Have Fun, and help the planet!</h2>
+        <div className={styles.buttonContainer}>
           <button className='clear-btn-green-border' onClick={getLocation}>
             Find Your Market
           </button>
         </div>
-        {/* <IconsSection /> */}
+        <IconsSection />
       </div>
-      {/* <SignupCTASection /> */}
+      <SignupCTASection />
     </div>
   );
 };
