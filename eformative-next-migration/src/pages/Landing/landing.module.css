@@ -1,28 +1,28 @@
-html, .body {
+.body {
     height: 100%;
     margin: 0;
   }
 
 
-.home-hero {
+.homeHero {
     margin: 0;
     padding-top: 8vw;
     padding-bottom: 10vw;
-    background: linear-gradient(345deg, rgba(214, 238, 2, 0.616), rgba(2, 97, 160, 0.959)), url('../../../public/assets/hero-bg.jpg');
+    background: linear-gradient(345deg, rgba(214, 238, 2, 0.616), rgba(2, 97, 160, 0.959)), url('/images/hero-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
     background-blend-mode: multiply;
 }
 
-.hero-logo {
+.heroLogo {
     display: block;
     margin:0 auto;
     max-width: 500px;
     width: 60vw;
 }
 
-.home-page-header {
+.homePageHeader {
     font-size: 3.5vw;
     text-align: center;
     color: rgb(255, 255, 255);
@@ -35,20 +35,20 @@ html, .body {
     
 }
 
-.button-container {
+.buttonContainer {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.paragraph-container {
+.paragraphContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
 }
 
-.second-page-paragraph {
+.secondPageParagraph {
     font-family: 'Open Sans', sans-serif;
     font-size: 2vw;
     font-weight: 400;
@@ -65,62 +65,62 @@ html, .body {
     75% { transform: translateX(-1px); }
   }
   
-  .shake-on-hover:hover {
+  .shakeOnHover:hover {
     animation: shake 0.35s;
     animation-iteration-count: 1;
   }
 
 /* MOBILE STYLES */
 @media (max-width: 768px) {
-    .home-page-paragraph {
+    .homePageParagraph {
       font-size: 5.5vw;
     }
   
-    .second-page-paragraph {
+    .secondPageParagraph {
       font-size: 4vw;
     }
   
-    .home-hero {
+    .homeHero {
       padding-top: 15vw;
       padding-bottom: 15vw;
     }
   
-    .two-columns-section {
+    .twoColumnsSection {
       flex-direction: column;
     }
   
-    .left-column {
+    .leftColumn {
       display: none;
     }
   
-    .right-column {
+    .rightColumn {
       padding: 0 0 40px;
       display: flex;
       flex-direction: column; /* Add this to stack the elements */
       align-items: center; /* Center the elements horizontally */
     }
   
-    .cta-header {
+    .ctaHeader {
         text-align: center;
     }
 
-    .cta-body {
+    .ctaBody {
         text-align: center;
     }
 
-    .icons-column {
+    .iconsColumn {
       flex: 0 0 100%;
       margin-bottom: 30px;
     }
 
-    .icons-column-image {
+    .iconsColumnImage {
         display: block;
         width: 60px;
         height: auto;
         margin: 0 auto;
     }
     
-    .icons-column-title {
+    .iconsColumnTitle {
     font-size: 1.25rem;
     margin-bottom: 5px;
     font-weight: 400;
@@ -129,15 +129,15 @@ html, .body {
 
 /* WIDESCREEN STYLES */
 @media screen and (min-width: 1920px) {
-    .home-page-paragraph {
+    .homePageParagraph {
         font-size: 60px;
     }
 
-    .second-page-paragraph {
+    .secondPageParagraph {
         font-size: 40px;
     }
     
-    .home-hero {
+    .homeHero {
         padding-top: 8vw;
         padding-bottom: 8vw;
     }
