@@ -1,13 +1,12 @@
 import Head from "next/head";
-import Landing from "./Landing"
 
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
-        <meta name="description" content="eformative website for buying and selling of E-bikes, E-scooters, One Wheels, and other alternative transportation method" />
+        <title>eFormative</title>
+        <meta name="description" content="eformative website for buying and selling of E-bikes, E-scooters, One Wheels, and other alternative transportation methods" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json"/>
@@ -18,7 +17,6 @@ export default function Home() {
       </Head>
       <main>
         <div>
-          <Landing/>
         </div>
       </main>
     </>
