@@ -1,0 +1,142 @@
+.navbar {
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: padding 0.3s ease-in-out;
+  }
+  
+  .navbarScrolled {
+    padding: 5px 0;
+  }
+  
+  .innerNavbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px 20px;
+    transition: padding 0.3s ease-in-out;
+  }
+  
+  .navbarScrolled, .innerNavbar {
+    padding: 5px 10px;
+  }
+  
+  .navbarScrolled, .navbarLink {
+    font-size: 22px;
+  }
+  
+  .navbarLink:hover,
+  .navbarLink.active {
+    color: rgb(50, 179, 161);
+  }
+  
+  .navbarLogoContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  .navbarLogo {
+    height: 50px;
+    padding-top: 10px;
+    transition: height 0.3s ease-in-out;
+  }
+  
+  .navbarScrolled .navbarLogo {
+    height: 45px;
+  }
+  
+  .hamburgerMenu {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+  }
+  
+  .navbarLinks {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .navbarLink {
+    padding: 10px;
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(19, 19, 19);
+    transition: all 0.3s ease-in-out;
+    display: block;
+  }
+  
+  @media screen and (max-width: 768px) {
+    
+    .navbar {
+      top: 0;
+    }
+  
+    .navbarScrolled {
+      padding: 0;
+    }
+  
+    .innerNavbar {
+      padding: 10px 10px;
+    }
+  
+    .navbarScrolled .innerNavbar {
+      padding: 10px 10px;
+    }
+  
+    .navbarLink {
+      font-size: 20px;
+      padding: 5px;
+    }
+  
+    .navbarLogoContainer {
+      justify-content: center;
+    }
+  
+    .navbarLogo {
+      height: 35px;
+    }
+  
+    .navbarScrolled .navbarLogo {
+      height: 35px;
+    }
+  
+    .navbarLinks {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: rgb(255, 255, 255);
+      padding: 10px;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbarLinksOpen {
+      display: flex;
+    }
+  
+    .hamburgerMenu {
+      display: block;
+    }
+  
+    @media screen and (max-width: 480px) {
+      .navbarLogoContainer {
+        justify-content: center;
+      }
+    }
+  }
+  
