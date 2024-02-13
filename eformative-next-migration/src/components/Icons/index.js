@@ -1,11 +1,11 @@
 import React from "react";
-// import "./Icons.css";
+import styles from "./Icons.module.css";
 
 const IconsSection = () => {
   return (
-    <div className='icons-section'>
-      <div className='container'>
-        <div className='row'>
+    <div className={styles.iconsSection}>
+      <div className={styles.container}>
+        <div className={styles.row}>
           {[
             {
               src: "/images/electric-products-white.png",
@@ -19,9 +19,9 @@ const IconsSection = () => {
               title: "Reviews",
             },
           ].map(({ src, alt, title }) => (
-            <div className='icons-column shake-on-hover' key={title}>
-              <img className='icons-column-image' src={src} alt={alt} />
-              <h2 className='icons-column-title'>{title}</h2>
+            <div className={styles.iconsColumn} key={title}>
+              <img className={styles.iconsColumnImage} src={src} alt={alt} />
+              <h2 className={styles.iconsColumnTitle}>{title}</h2>
             </div>
           ))}
         </div>
