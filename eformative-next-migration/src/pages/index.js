@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Landing from "./Landing";
+import Market from "./Market";
 
 
 export default function Home() {
@@ -17,6 +19,8 @@ export default function Home() {
       </Head>
       <main>
         <div>
+          <Landing/>
+          <Market/>
         </div>
       </main>
     </>
