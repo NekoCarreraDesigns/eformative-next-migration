@@ -1,6 +1,7 @@
+'use client'
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./Market.css";
+import styles from "./Market.module.css";
 import {
   Card,
   CardHeader,
@@ -26,7 +27,7 @@ const Market = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("market/items");
+        const response = await axios.get("/market/items");
         setDisplayedItems(response.data);
       } catch (error) {
         console.log(error);
@@ -77,14 +78,14 @@ const Market = () => {
 
   return (
     <>
-      <div className='hero-section'>
-        <h1 className='market-page-header'>Market</h1>
-        <div className='market-filter-div'>
+      <div className={styles.heroSection}>
+        <h1 className={styles.marketPageHeader}>Market</h1>
+        <div className={styles.marketFilterDiv}>
           <SearchBar onSearch={fetchItems} />
         </div>
       </div>
       {selectedItem ? (
-        <div className='item-details-container'>
+        <div className={styles.itemDetailsContainer1}>
           <Card elevation={6} className='item-card'>
             <CardHeader
               title={selectedItem.product}
@@ -106,9 +107,9 @@ const Market = () => {
           </Card>
         </div>
       ) : displayedItems.length > 0 ? (
-        <div className='card-container'>
+        <div className={styles.cardContainer}>
           {displayedItems.map((item, index) => (
-            <Card elevation={6} className='item-card' key={index}>
+            <Card elevation={6} className={styles.itemCard} key={index}>
               <CardHeader
                 title={item.product}
                 subheader={item.sellerName}
@@ -133,8 +134,8 @@ const Market = () => {
           ))}
         </div>
       ) : (
-        <div className='alert-div'>
-          <Typography variant='body1' className='alert-paragraph'>
+        <div className={styles.alertDiv}>
+          <Typography variant='body1' className={styles.alertParagraph}>
             No results found! Could be a misspelling or it is not here
           </Typography>
         </div>
