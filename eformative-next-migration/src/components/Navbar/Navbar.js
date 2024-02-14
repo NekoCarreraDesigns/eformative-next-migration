@@ -33,35 +33,35 @@ const Navbar = () => {
         <div className={styles.navbarLinks}>
           <Link
             className={styles.navbarLink}
-            href="/"
+            href="/Landing"
             onClick={() => setIsMenuOpen(false)}
           >
             Home
           </Link>
           <Link
             className={styles.navbarLink}
-            href="/market"
+            href="/Market"
             onClick={() => setIsMenuOpen(false)}
           >
             Market
           </Link>
           <Link
             className={styles.navbarLink}
-            href="/reviews"
+            href="/Reviews"
             onClick={() => setIsMenuOpen(false)}
           >
             Reviews
           </Link>
           <Link
             className={styles.navbarLink}
-            href="/sell"
+            href="/Sell"
             onClick={() => setIsMenuOpen(false)}
           >
             Sell
           </Link>
         </div>
         <div className={styles.navbarLogoContainer}>
-          <Link href="/">
+          <Link href="/Landing">
             <img alt="logo" className={styles.navbarLogo} src="/images/eformative-logo-2.png" />
           </Link>
         </div>
