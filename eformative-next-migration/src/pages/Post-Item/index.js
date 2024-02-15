@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { FormControl, TextareaAutosize, FormHelperText } from "@mui/material";
-import OnImageChange from "../../images/images";
-import "./PostItem.css";
+import OnImageChange from "../../components/userImages";
+import styles from "./postItem.module.css";
 
 
 
@@ -39,16 +39,16 @@ const PostItem = () => {
 
   return (
     <>
-      <div className='hero-section'>
-        <p className='post-item-paragraph'>Please post your item!</p>
-        <div className='post-item-form-div'>
+      <div className="heroSection">
+        <p className={styles.postItemParagraph}>Please post your item!</p>
+        <div className={styles.postItemFormDiv}>
           <form>
             <FormControl>
               <input
                 required
                 placeholder='What is your name'
                 variant='outlined'
-                className='seller-name-post-input text-input-white'
+                className={`text-input-white ${styles.sellerNamePostInput}`}
                 id='seller-input'
                 onChange={(event) => setSellerName(event.target.value)}
               />
@@ -59,7 +59,7 @@ const PostItem = () => {
                   required
                   placeholder='Input item name'
                   variant='outlined'
-                  className='item-name-input text-input-white'
+                  className={`text-input-white ${styles.itemNameInput}`}
                   id='item-input'
                   onChange={(event) => setProductName(event.target.value)}
                 />
@@ -70,7 +70,7 @@ const PostItem = () => {
                   type='file'
                   multiple
                   accept='image/*'
-                  className='upload-picture-video-input'
+                  className={styles.uploadPictureVideoInput}
                   id='image-input'
                   name='post-item-picture-video'
                   placeholder='upload an image or a video'
@@ -82,14 +82,14 @@ const PostItem = () => {
                 required
                 placeholder='Please input a price'
                 variant='outlined'
-                className='item-price-input text-input-white'
+                className={`text-input-white ${styles.itemPriceInput}`}
                 id='price-input'
                 onChange={(event) => setPrice(event.target.value)}
               />
               <br />
               <br />
               <TextareaAutosize
-                className='post-item-textarea'
+                className={styles.postItemTextarea}
                 onChange={(event) => {
                   characterCounter(event)
                   setDescription(event.target.value)}}
@@ -100,12 +100,12 @@ const PostItem = () => {
               />
 
               <br />
-              <span className='character-count-post-span'>
+              <span className={styles.characterCountPostSpan}>
                 <strong>{300 - inputArea.length} characters left</strong>
               </span>
               <br />
               <button
-                className='add-item-button clear-btn-green-border'
+                className={`${styles.addItemButton} clear-btn-green-border`}
                 onClick={addItem}>
                 Post Item
               </button>
