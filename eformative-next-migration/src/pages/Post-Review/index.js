@@ -7,8 +7,8 @@ import {
   TextField,
   TextareaAutosize,
 } from "@mui/material";
-import OnImageChange from "../../images/images";
-import "./PostReview.css";
+import OnImageChange from "../../components/userImages";
+import styles from "./postReview.module.css";
 
 const addReview = () => {
   const reviewerNameInput = document.getElementById("seller-name");
@@ -50,15 +50,15 @@ const PostReview = () => {
   return (
     <>
       
-      <div className='review-container hero-section'>
-        <h1 className='post-review-header'>Post a review!</h1>
+      <div className={`${styles.reviewContainer} heroSection`}>
+        <h1 className={styles.postReviewHeader}>Post a review!</h1>
         <form onSubmit={addReview} className='post-review-form'>
-          <div className='form-control-wrapper'>
-            <FormControl className='custom-form-control'>
+          <div className={styles.formControlWrapper}>
+            <FormControl className={styles.customFormControl}>
               <TextField
                 fullWidth
                 required
-                className='seller-name-input text-input-dark'
+                className={`${styles.sellerNameInput} text-input-dark`}
                 id='seller-name'
                 type='text'
                 aria-label="Name input for the reviewer"
@@ -68,7 +68,7 @@ const PostReview = () => {
               <br />
               <TextField
                 fullWidth
-                className='product-name-input text-input-dark'
+                className={`${styles.productNameInput} text-input-dark`}
                 id='product-name'
                 type='text'
                 placeholder='Product being reviewed'
@@ -78,7 +78,7 @@ const PostReview = () => {
               <br />
               <TextField
                 fullWidth
-                className='seller-review-input text-input-dark'
+                className={`${styles.sellerReviewInput} text-input-dark`}
                 type='text'
                 placeholder='Seller being reviewed'
                 id='seller-review'
@@ -96,19 +96,19 @@ const PostReview = () => {
                 aria-label="user image upload button"
                 placeholder='Upload an image or a video'
                 onChange={OnImageChange}
-                className='upload-button'
+                className={styles.uploadButton}
               />
               <br />
               <br />
               <TextareaAutosize
                 maxLength={300}
-                className='user-post-review-textarea text-input-dark'
+                className={`${styles.userPostReviewTextarea} text-input-dark`}
                 id='review-text-area'
                 aria-label="user textarea to write reviews about sellers or products"
                 onChange={inputHandler}
               />
               <br />
-              <span className='character-count-span'>
+              <span className={styles.characterCountSpan}>
                 <strong>{300 - input.length} characters left</strong>
               </span>
               <br />
