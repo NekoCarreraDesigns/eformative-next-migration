@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./SellerReviews.css";
+import "./sellerReviews.module.css";
+import reviewStyles from ".reviews.module.css"
 
 const SellerReviews = () => {
   const [sellers, setSellers] = useState();
@@ -13,14 +14,14 @@ const SellerReviews = () => {
   return (
     <>
       <div className='hero-section'>
-        <h1 className='seller-reviews-header'>Seller Reviews</h1>
-          <div className='reviews-container'>
+        <h1 className={styles.sellerReviewsHeader}>Seller Reviews</h1>
+          <div className={reviewStyles.reviewsContainer}>
           {sellers?.map((sellers, reviewDisplay) => (
-            <div key={reviewDisplay} className='reviews-item'>
-              <h1 className='reviews-header'>
+            <div key={reviewDisplay} className={reviewStyles.reviewsItem}>
+              <h1 className={styles.reviewsHeader}>
                 Seller: {sellers.sellerName}, Reviewed by: {sellers.reviewerName}
               </h1>{" "}
-              <div className='reviews-div'>{sellers.review}</div> <hr />
+              <div className={styles.reviewsDiv}>{sellers.review}</div> <hr />
             </div>
           ))}
           </div>
