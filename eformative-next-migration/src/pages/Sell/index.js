@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/router";
 import axios from "axios";
 import Cookies from "universal-cookie"
-import "./Sell.css";
+import styles from "./sell.module.css";
 
 const Sell = () => {
   const [username, setUsername] = useState("");
   const [userPassword, setUserPassword] = useState("")
-  let navigate = useNavigate();
+  let navigate = useRouter();
 
   const signUpRedirect = () => {
     let signupRedirectPath = `/signup`;
-    navigate(signupRedirectPath);
+    navigate.push(signupRedirectPath);
   };
 
   const handleUsernameChange = (event) => {
@@ -46,15 +46,15 @@ const Sell = () => {
 
   return (
     <>
-      <div className='hero-section sell-container'>
-        <h1 className='sell-page-header'>Sell</h1>
+      <div className={`heroSection ${styles.sellContainer}`}>
+        <h1 className={styles.sellPageHeader}>Sell</h1>
         {/* <p className='sell-page-paragraph'>
           If you are a returning seller, please log in here.
         </p> */}
-          <div className='sell-form-div'>
+          <div className={styles.sellFormDiv}>
             <form onSubmit={userSignIn} className='sell-page-form'>
               <input
-                className='username-input text-input-white'
+                className={`${styles.usernameInput} text-input-white}`}
                 type='text'
                 placeholder='please type username '
                 name="user name"
@@ -63,7 +63,7 @@ const Sell = () => {
                 onChange={handleUsernameChange}></input>
               <br />
               <input
-                className='user-password-input text-input-white'
+                className={`${styles.userPasswordInput} text-input-white`}
                 placeholder='please enter password'
                 id='user-password'
                 name="user-password"
@@ -72,13 +72,13 @@ const Sell = () => {
                 value={userPassword}
                 onChange={handlePasswordChange}></input>
               <br />
-              <button className='clear-btn-green-border user-login-submit-button' type='submit' aria-label="click button to login">
+              <button className={`clear-btn-green-border ${styles.userLoginSubmitButton}`} type='submit' aria-label="click button to login">
                 Login
               </button>
             </form>
           </div>
-          <p className='new-seller-paragraph'>New sellers please sign up here.</p>
-          <button aria-label="button to signup to the site" className='clear-btn-sm clear-btn-green-border user-signup-redirect' onClick={signUpRedirect}>
+          <p className={styles.newSellerParagraph}>New sellers please sign up here.</p>
+          <button aria-label="button to signup to the site" className={`clear-btn-sm clear-btn-green-border ${styles.userSignupRedirect}`} onClick={signUpRedirect}>
             signup
           </button>
       </div>
