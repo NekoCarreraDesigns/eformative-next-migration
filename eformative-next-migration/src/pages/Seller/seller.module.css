@@ -1,14 +1,14 @@
-.seller-page-header {
+.sellerPageHeader {
     text-align: center;
     font-size: 40px;
     color: rgb(233, 255, 255);
 }
 
-.items-sold-header, .items-selling-header {
+.itemsSoldHeader, .itemsSellingHeader {
     font-size: 30px;
 }
 
-.post-item-button, .logout-button {
+.postItemButton, .logoutButton {
     display: flex;
     flex-direction: column;
     justify-content: center;

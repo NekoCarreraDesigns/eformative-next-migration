@@ -1,14 +1,14 @@
 import React,{ useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/router";
 import axios from "axios";
 import Cookies from "universal-cookie"
-import "./Seller.css";
+import styles from "./seller.module.css";
 
 const Seller = () => {
   const [users, setUser] = useState({});
   const [sellingItems, setSellingItems] = useState([]);
   const [soldItems, setSoldItems] = useState([])
-  let navigate = useNavigate();
+  let navigate = useRouter();
   
   function getCookie() {
     const cookies = new Cookies()
@@ -19,13 +19,13 @@ const Seller = () => {
 
   const postItemRedirect = () => {
     let postItemPath = `/post-item`;
-    navigate(postItemPath);
+    navigate.push(postItemPath);
   };
 
   const handleLogout = (event) => {
     event.preventDefault();
     sessionStorage.removeItem("users");
-    navigate("/sell");
+    navigate.push("/sell");
     console.log("logged out");
   };
 
@@ -74,20 +74,20 @@ const Seller = () => {
       <div className='hero-section'>
         <div>
           {users && (
-            <h1 className='seller-page-header'>Welcome {users.fullName}!</h1>
+            <h1 className='sellerPageHeader'>Welcome {users.fullName}!</h1>
           )}
         </div>
-      <button className='clear-btn-green-border post-item-button' onClick={postItemRedirect} aria-label="button to sell items">
+      <button className={`clear-btn-green-border ${styles.postItemButton}`} onClick={postItemRedirect} aria-label="button to sell items">
         Post an item to sell
       </button>
       <br/>
-      <button className='logout-button clear-btn-green-border' aria-label="button to logout of site" onClick={handleLogout}>
+      <button className={`${styles.logoutButton} clear-btn-green-border`} aria-label="button to logout of site" onClick={handleLogout}>
         Logout
       </button>
 
       {sellingItems.length > 0 && (
-          <div className='items-selling-div'>
-            <h1 className='items-selling-header'>Items For Sale</h1>
+          <div className={styles.itemsSellingDiv}>
+            <h1 className={styles.itemsSellingHeader}>Items For Sale</h1>
             {sellingItems.map((item) => (
               <div key={item.id}>
                 <img alt='sale-item' src={item.image} />
@@ -98,8 +98,8 @@ const Seller = () => {
           </div>
         )}
       {soldItems.length > 0 && (
-          <div className='items-sold-div'>
-            <h1 className='items-sold-header'>Items Sold</h1>
+          <div className={styles.itemsSoldDiv}>
+            <h1 className={styles.itemsSoldHeader}>Items Sold</h1>
             {soldItems.map((item) => (
               <div key={item.id}>
                 <img alt='sale-item' src={item.image} />
