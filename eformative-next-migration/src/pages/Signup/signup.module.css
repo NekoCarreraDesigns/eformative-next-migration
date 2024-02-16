@@ -1,4 +1,4 @@
-.signup-container {
+.signupContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,32 +8,32 @@
     padding: 6vw 0 15vw;
 }
   
-.signup-page-header {
+.signupPageHeader {
     text-align: center;
     color: rgb(255, 255, 255);
     padding-bottom: 50px
 }
   
-.signup-form-container {
+.signupFormContainer {
     margin-bottom: 20px;
 }
   
-.signup-form {
+.signupForm {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
   
-.fullName-input,
-.userName-input,
-.email-input,
-.password-input {
+.fullNameInput,
+.userNameInput,
+.emailInput,
+.passwordInput {
     width: 300px;
     padding: 10px;
     margin-bottom: 10px;
 }
   
-.user-signup-button {
+.userSignupButton {
     padding: 10px 20px;
     font-size: 16px;
 }  

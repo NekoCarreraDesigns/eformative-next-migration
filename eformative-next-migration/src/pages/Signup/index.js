@@ -1,15 +1,15 @@
 import {React, useState} from "react";
 import axios from "axios";
-import "./Signup.css";
+import styles from "./signup.module.css";
 
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/router";
 
 const Signup = () => {
   const [fullName, setFullName] = useState("");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("")
-  let navigate = useNavigate();
+  let navigate = useRouter();
   let postItemPath = `/post-item`;
 
   const userPostSignUp = (event) => {
@@ -31,12 +31,12 @@ const Signup = () => {
   };
 
   return (
-    <div className="hero-section signup-container">
-      <h1 className="signup-page-header">Please Sign Up</h1>
-      <div className="signup-form-container">
-        <form onSubmit={userPostSignUp} className="signup-form">
+    <div className={`hero-section ${signup-container}`}>
+      <h1 className={styles.signupPageHeader}>Please Sign Up</h1>
+      <div className={styles.signupFormContainer}>
+        <form onSubmit={userPostSignUp} className={styles.signupForm}>
           <input
-            className="fullName-input text-input-white"
+            className={`${fullNameInput} text-input-white`}
             placeholder="Please enter full name"
             name="full name"
             aria-label="full name input for seller signup"
@@ -44,7 +44,7 @@ const Signup = () => {
           />
           <br />
           <input
-            className="userName-input text-input-white"
+            className={`${userNameInput} text-input-white`}
             placeholder="Please enter a username"
             name="user name"
             aria-label="username input for seller signup"
@@ -53,7 +53,7 @@ const Signup = () => {
           <br />
           <input
             type="text"
-            className="email-input text-input-white"
+            className={`${emailInput} text-input-white`}
             placeholder="Please enter an email"
             name="user email"
             aria-label="email input for seller signup"
@@ -62,14 +62,14 @@ const Signup = () => {
           <br />
           <input
             type="password"
-            className="password-input text-input-white"
+            className={`${passwordInput} text-input-white`}
             placeholder="Please enter a password"
             name="password"
             aria-label= "user password input for seller signup"
             onChange={(event) => setPassword(event.target.value)}
           />
           <br />
-          <button className="clear-btn-green-border user-signup-button" type="submit">
+          <button className={`clear-btn-green-border ${userSignupButton}`} type="submit">
             Sign Up
           </button>
         </form>
