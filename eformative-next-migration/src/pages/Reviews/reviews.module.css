@@ -1,17 +1,17 @@
-.reviews-page-header {
+.reviewsPageHeader {
     text-align: center;
     color: rgb(255, 255, 255);
     padding-bottom: 25px
 }
   
-.search-filters-div {
+.searchFiltersDiv {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 20px;
 }
   
-.seller-filter-div {
+.sellerFilterDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,13 +19,13 @@
     max-width: 800px;
 }
   
-.search-row {
+.searchRow {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
   
-.search-input-button {
+.searchInputButton {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,12 +41,12 @@
     background-color: rgb(255, 255, 255)1d;
 }
 
-.post-a-review-button {
+.postReviewButton {
     margin-top: 5vw;
     margin-bottom: 0px;
 }
 
-.reviews-container {
+.reviewsContainer {
     display: flex;
     padding: 5vw 0;
     flex-direction: column;
@@ -54,18 +54,18 @@
     width: 100%;
 }
   
-.reviews-item {
+.reviewsItem {
     width: 80%;
     max-width: 1200px;
 }
   
-.reviews-header {
+.reviewsHeader {
     color: #333;
     font-size: 1.4rem;
     margin-bottom: 5px;
 }
   
-.reviews-div {
+.reviewsDiv {
     background-color: rgb(255, 255, 255);
     border-radius: 4px;
     margin-bottom: 20px;
