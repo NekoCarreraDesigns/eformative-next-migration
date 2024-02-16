@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import styles from "./Market.module.css";
+import styles from "./market.module.css";
 import {
   Card,
   CardHeader,
@@ -78,7 +78,7 @@ const Market = () => {
 
   return (
     <>
-      <div className={styles.heroSection}>
+      <div className="heroSection">
         <h1 className={styles.marketPageHeader}>Market</h1>
         <div className={styles.marketFilterDiv}>
           <SearchBar onSearch={fetchItems} />

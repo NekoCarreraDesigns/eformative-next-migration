@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import styles from "./reviews.module.css";
-import SearchBar from "../../components/SearchBar";
+import SearchBar from "../../components/SearchBar/SearchBar";
 
 const Reviews = () => {
   const [reviews, setReview] = useState();

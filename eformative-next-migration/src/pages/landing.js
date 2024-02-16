@@ -1,12 +1,12 @@
 'use client'
 
 import React from "react";
-import styles from "./landing.module.css";
+import styles from "../styles/landing.module.css";
 import { useRouter } from 'next/router'
-import SignupCTASection from "../../components/SignupCTASection";
-import IconsSection from "../../components/Icons";
+import SignupCTASection from "../components/SignupCTASection";
+import IconsSection from "../components/Icons";
 
-const Landing = () => {
+export default function Landing () {
   let navigate = useRouter();
   const getLocation = () => {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -37,4 +37,3 @@ const Landing = () => {
   );
 };
 
-export default Landing;
