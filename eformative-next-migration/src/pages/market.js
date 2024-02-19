@@ -13,7 +13,7 @@ import {
   Snackbar,
   CircularProgress,
 } from "@mui/material";
-import SearchBar from "../../components/SearchBar/SearchBar";
+import SearchBar from "../components/SearchBar/SearchBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
