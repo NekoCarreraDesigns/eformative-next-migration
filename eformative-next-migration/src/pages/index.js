@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Landing from "./landing";
 import Market from "./market";
-import Sell from "../app/Sell"
-import Reviews from "../app/Reviews";
+import Sell from "./sell"
+import Reviews from "./reviews";
 
 
 export default function Home() {
