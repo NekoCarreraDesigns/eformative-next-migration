@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./landing.module.css";
 import { useRouter } from 'next/router'
-import SignupCTASection from "../../components/SignupCTASection";
-import IconsSection from "../../components/Icons";
+import SignupCTASection from "../components/SignupCTASection";
+import IconsSection from "../components/Icons";
 
 export default function Landing () {
   let navigate = useRouter();

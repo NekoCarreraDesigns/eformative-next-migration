@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Landing from "./Landing/landing";
-import Market from "./Market/market";
+import Landing from "./landing";
+import Market from "../app/Market/market";
 
 
 export default function Home() {
