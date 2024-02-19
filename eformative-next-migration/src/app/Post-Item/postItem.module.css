@@ -1,0 +1,36 @@
+.postItemParagraph {
+    text-align: center;
+    font-size: 40px;
+    color: rgba(254, 254, 255)
+}
+
+.postItemFormDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80%;
+    text-align: center;
+    padding: 6vw 0 15vw;
+}
+
+.itemNameInput, .itemPriceInput, .sellerNamePostInput, .uploadPictureVideoInput {
+    border-radius: 10px;
+    width: 300px;
+    padding: 10px;
+}
+
+.postItemTextarea {
+    height: 400px;
+    width: 600px;
+}
+
+.addItemButton {
+    width: 200px;
+    padding: 10px 20px;
+}
+
+.characterCountPostSpan {
+    color: rgba(255, 0, 0, 0.6);
+}
+
