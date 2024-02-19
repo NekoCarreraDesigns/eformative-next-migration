@@ -1,0 +1,3 @@
+The Signup.js file uses an axios dependency to post to the database, this may need to be updated frequently. 
+The function inside the signup uses a hook to redirect to the post item page, this hook may or may not end up being 
+deprecated in the future. 
